@@ -14,6 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/xiaomi/mayfly/device.mk)
 
 # Inherit from the AOSPA configuration.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
 PRODUCT_BRAND := Xiaomi
@@ -29,5 +30,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 endif
